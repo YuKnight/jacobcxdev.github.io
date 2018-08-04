@@ -29,15 +29,15 @@ $(function(){
                    document.getElementById("maxiOS").innerHTML = $(this).find("maxiOS").text();
                                             
                    $(xml).find('newline1').each(function(){
-                       $("#newline1" ).append((this).text()+ '<br/>');
+                       $("#newline1" ).append($(this).text()+ '<br/>');
                    });
                                             
                    $(xml).find('newline2').each(function(){
-                       $("#newline2" ).append((this).text()+ '<br/>'+'<br/>');
+                       $("#newline2" ).append($(this).text()+ '<br/><br/>');
                    });
                                             
                    $(xml).find('newpara').each(function(){
-                       $("#newpara" ).append((this).text()+ '<br/>'+'<br/>'+'<br/>');
+                       $("#newpara" ).append($(this).text()+ '<br/><br/><br/>');
                    });
 
                    $(xml).find('description').each(function(){
