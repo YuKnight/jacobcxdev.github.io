@@ -27,6 +27,18 @@ $(function(){
                    //document.getElementById("version").innerHTML = $(this).find("version").text();
                    document.getElementById("miniOS").innerHTML = $(this).find("miniOS").text();
                    document.getElementById("maxiOS").innerHTML = $(this).find("maxiOS").text();
+                                            
+                   $(xml).find('newline1').each(function(){
+                       $("#newline1" ).append((this).text()+ '<br/>');
+                   });
+                                            
+                   $(xml).find('newline2').each(function(){
+                       $("#newline2" ).append((this).text()+ '<br/><br/>');
+                   });
+                                            
+                   $(xml).find('newpara').each(function(){
+                       $("#newpara" ).append((this).text()+ '<br/><br/><br/>');
+                   });
 
                    $(xml).find('description').each(function(){
                        $("#description" ).append('<li>' +$(this).text()+ '</li>');
