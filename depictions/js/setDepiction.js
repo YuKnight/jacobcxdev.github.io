@@ -29,20 +29,20 @@ $(function(){
                    document.getElementById("maxiOS").innerHTML = $(this).find("maxiOS").text();
 
 
-                   $(xml).find('description').each(function(){
+  /*                 $(xml).find('description').each(function(){
                        $("#description" ).append('<li>' +$(this).text()+ '</li>');
                    });
-
+*/
                    $(xml).find('newline1').each(function(){
-                       $("#newline1" ).append($(this).text()+ '<br/>');
+                       $("#newline1" ).append('<li>' +$(this).text()+ '</li><br/>');
                    });
 
                    $(xml).find('newline2').each(function(){
-                       $("#newline2" ).append($(this).text()+ '<br/><br/>');
+                       $("#newline2" ).append('<li>' +$(this).text()+ '</li><br/><br/>');
                    });
 
                    $(xml).find('newpara').each(function(){
-                       $("#newpara" ).append($(this).text()+ '<br/><br/><br/>');
+                       $("#newpara" ).append('<li>' +$(this).text()+ '</li><br/><br/><br/>');
                    });
 
                    $(xml).find('dependency').each(function(){
