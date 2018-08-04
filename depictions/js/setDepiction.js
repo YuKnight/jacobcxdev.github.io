@@ -30,7 +30,7 @@ $(function(){
 
 
                    $(xml).find('description').each(function(){
-                       $("#description" ).append('<li>' +$(this).text()+ '</li>');
+                       $("#description" ).append('<p>' +$(this).text()+ '</p>');
                    });
 
                    $(xml).find('newline1').each(function(){
