@@ -28,21 +28,20 @@ $(function(){
                    document.getElementById("miniOS").innerHTML = $(this).find("miniOS").text();
                    document.getElementById("maxiOS").innerHTML = $(this).find("maxiOS").text();
 
+                   $(xml).find('newline1').each(function(){
+                       $("#newline1" ).append($(this).text()+ '<br/>');
+                   });
+                                            
+                   $(xml).find('newline2').each(function(){
+                       $("#newline2" ).append($(this).text()+ '<br/><br/>');
+                   });
+                                            
+                   $(xml).find('newpara').each(function(){
+                       $("#newpara" ).append($(this).text()+ '<br/><br/><br/>');
+                   });
 
                    $(xml).find('description').each(function(){
-                       $("#description" ).append('<p>' +$(this).text()+ '</p>');
-                   });
-
-                   $(xml).find('newline1').each(function(){
-                       $("#newline1" ).append('<li>' +$(this).text()+ '</li><br/>');
-                   });
-
-                   $(xml).find('newline2').each(function(){
-                       $("#newline2" ).append('<li>' +$(this).text()+ '</li><br/><br/>');
-                   });
-
-                   $(xml).find('newpara').each(function(){
-                       $("#newpara" ).append('<li>' +$(this).text()+ '</li><br/><br/><br/>');
+                       $("#description" ).append('<pre>' +$(this).text()+ '</pre>');
                    });
 
                    $(xml).find('dependency').each(function(){
