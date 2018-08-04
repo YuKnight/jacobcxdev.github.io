@@ -29,10 +29,10 @@ $(function(){
                    document.getElementById("maxiOS").innerHTML = $(this).find("maxiOS").text();
 
 
-  /*                 $(xml).find('description').each(function(){
+                   $(xml).find('description').each(function(){
                        $("#description" ).append('<li>' +$(this).text()+ '</li>');
                    });
-*/
+
                    $(xml).find('newline1').each(function(){
                        $("#newline1" ).append('<li>' +$(this).text()+ '</li><br/>');
                    });
