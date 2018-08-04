@@ -33,11 +33,11 @@ $(function(){
                    });
                                             
                    $(xml).find('newline2').each(function(){
-                       $("#newline2" ).append((this).text()+ '<br/><br/>');
+                       $("#newline2" ).append((this).text()+ '<br/>'+'<br/>');
                    });
                                             
                    $(xml).find('newpara').each(function(){
-                       $("#newpara" ).append((this).text()+ '<br/><br/><br/>');
+                       $("#newpara" ).append((this).text()+ '<br/>'+'<br/>'+'<br/>');
                    });
 
                    $(xml).find('description').each(function(){
