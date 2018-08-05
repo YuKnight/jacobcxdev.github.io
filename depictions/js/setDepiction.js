@@ -21,11 +21,15 @@ $(function(){
          // Parse the xml file and get data
          $(xml).find('packageInfo').each(function(){
                                          document.getElementById("packageTitle").innerHTML = $(this).find("name").text();
+                                         console.log("Parsed packageTitle");
                                          //document.getElementById("bundleId").innerHTML = $(this).find("bundleId").text();
+                                         //console.log("Parsed bundleId");
                                          //document.getElementById("version").innerHTML = $(this).find("version").text();
+                                         //console.log("Parsed version");
                                          
                                          document.getElementById("miniOS").innerHTML = $(this).find("miniOS").text();
                                          document.getElementById("maxiOS").innerHTML = $(this).find("maxiOS").text();
+                                         console.log("Parsed miniOS = " + $(this).find("miniOS").text() + " and maxiOS = " + $(this).find("maxiOS").text());
                                          
                                          
                                          var UA = navigator.userAgent;
@@ -48,7 +52,9 @@ $(function(){
                                          for (i = 0; i < userOS.length; ++i) {
                                          if(lowOS[i] > userOS[i])
                                          userIsLower = true;
+                                         console.log("userIsLower = true");
                                          if(lowOS[i] < userOS[i])
+                                         console.log("userIsLower = false");
                                          break;
                                          }
                                          }else{
@@ -56,7 +62,9 @@ $(function(){
                                          for (i = 0; i < lowOS.length; ++i) {
                                          if(lowOS[i] > userOS[i])
                                          userIsLower = true;
+                                         console.log("userIsLower = true");
                                          if(lowOS[i] < userOS[i])
+                                         console.log("userIsLower = false");
                                          break;
                                          }
                                          }
@@ -66,8 +74,10 @@ $(function(){
                                          for (i = 0; i < userOS.length; ++i) {
                                          if(highOS[i] < userOS[i]){
                                          userIsHigher = true;
+                                         console.log("userIsHigher = true");
                                          }
                                          if(highOS[i] > userOS[i])
+                                         console.log("userIsHigher = false");
                                          break;
                                          }
                                          }else{
@@ -75,54 +85,66 @@ $(function(){
                                          for (i = 0; i < highOS.length; ++i) {
                                          if(highOS[i] < userOS[i]){
                                          userIsHigher = true;
+                                         console.log("userIsHigher = true");
                                          }
                                          if(highOS[i] > userOS[i])
+                                         console.log("userIsHigher = false");
                                          break;
                                          }
                                          if ((userOS[i] > 0) && (userOS[i - 1] == highOS[i - 1]))
                                          userIsHigher = true;
+                                         console.log("userIsHigher = true");
                                          }
                                          
                                          if(userIsHigher == false && userIsLower == false){
                                          document.getElementById("Compatibility").style["backgroundColor"] = "#6dff91";
                                          document.getElementById("youriOS").innerHTML = "Your device is compatible";
                                          document.getElementById("compatibilityIcon").innerHTML = "😀";
+                                         console.log("Device compatible");
                                          
                                          }else {
                                          document.getElementById("Compatibility").style["backgroundColor"] = "#ff5151";
                                          document.getElementById("youriOS").innerHTML = "Your device is not compatible";
                                          document.getElementById("compatibilityIcon").innerHTML = "😞";
+                                         console.log("Device incompatible");
                                          
                                          }
                                          }else{
                                          document.getElementById("Compatibility").style["backgroundColor"] = "#fff45b";
                                          document.getElementById("youriOS").innerHTML = "Your device could not be identified";
                                          document.getElementById("compatibilityIcon").innerHTML = "⚠️";
+                                         console.log("Device unidentified");
                                          
                                          }
                                          
                                          $(xml).find('description').each(function(){
                                                                          document.getElementById("description").innerHTML = $(this).text();
+                                                                         console.log("Parsed description" + $(this).text());
                                                                          });
                                          
                                          $(xml).find('dependency').each(function(){
                                                                         $("#dependencies" ).append('<li>' +$(this).text()+ '</li>');
+                                                                        console.log("Parsed dependency" + $(this).text());
                                                                         });
                                          
                                          $(xml).find('linkName').each(function(){
-                                                                      $("#dependencies" ).append('<li>' +$(this).text()+ '</li>');
+                                                                      $("#links" ).append('<li>' +$(this).text()+ '</li>');
+                                                                      console.log("Parsed link" + $(this).text());
                                                                       });
                                          
                                          $(xml).find('change').each(function(){
                                                                     $("#changeLog" ).append('<li>' + '<h1>' + $(this).find("changeVersion").text() + '</h1>');
                                                                     $(this).find('changeDescription').each(function(){
                                                                                                            $("#changeLog" ).append('<h2>' + $(this).text()+ '<h2>');
+                                                                                                           console.log("Parsed changeDescription" + $(this).text());
                                                                                                            });
                                                                     $("#changeLog" ).append('<li>');
+                                                                    console.log("Parsed changeVersion" + $(this).text());
                                                                     });
                                          
                                          $(xml).find('screen').each(function(){
                                                                     $("#screenshots" ).append('<li>' + '<img src="' + pathTo + "/" + $(this).text() + '" draggable="false" />' + '</li>');
+                                                                    console.log("Parsed screenshot" + $(this).text());
                                                                     });
                                          });
          
