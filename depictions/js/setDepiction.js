@@ -28,12 +28,12 @@ $(function(){
                    document.getElementById("miniOS").innerHTML = $(this).find("miniOS").text();
                    document.getElementById("maxiOS").innerHTML = $(this).find("maxiOS").text();
 
-/*                   $(xml).find('br').each(function(){
-                       $("#br" ).append('<p>' +$(this).text()+ '</p>');
+                   $(xml).find('newline').each(function(){
+                       $("#description" ).append('<li>' +$(this).text()+ '</li><br/><br/>');
                    });
-*/
-                   $(xml).find('br').each(function(){
-                       $("#description" ).append('<li>' +$(this).text()+ '</li>');
+
+                   $(xml).find('newpara').each(function(){
+                       $("#description" ).append('<li>' +$(this).text()+ '</li><br/><br/><br/>');
                    });
 
                    $(xml).find('dependency').each(function(){
