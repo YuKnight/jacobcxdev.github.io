@@ -105,11 +105,11 @@ body {
 }
 
 #compatibilityIcon, #compatibilitySide{
-    display: inline-block;
+    display: block;
+    color: black;
 }
 #compatibilityIcon{
     font-size: 34px;
-    padding-right: 20px;
 }
 #MINIOS,#MAXIOS{
     display: inline-block;
