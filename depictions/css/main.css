@@ -63,7 +63,8 @@ body {
     margin-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
-    width: auto;
+    width: 88vw;
+    max-width: 760px;
     text-align: center;
     font-size: 17px;
     color: white;
@@ -72,12 +73,14 @@ body {
 .box{
     background-color: #101010;
     margin-bottom: 20px;
+    width: 90vw;
+    max-width: 800px;
     border-radius: 10px;
     padding: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
-    color: lightgray;
+    color: white;
     box-shadow: 0px 0px 10px #101010;
 }
 
@@ -101,6 +104,13 @@ body {
     font-size: 10px;
 }
 
+#compatibilityIcon, #compatibilitySide{
+    display: inline-block;
+}
+#compatibilityIcon{
+    font-size: 34px;
+    padding-right: 20px;
+}
 #MINIOS,#MAXIOS{
     display: inline-block;
 }
@@ -111,19 +121,54 @@ body {
     padding-top: 10px;
     white-space: pre-wrap;
 }
+
 #description li{
     margin-bottom: 10px;
 }
 
 #changeLog {
+    text-align: left;
     padding-bottom: 20px;
 }
 
 #changeLog h1{
+    text-align: center;
     margin-top: 20px;
     margin-bottom: 5px;
-    text-align: center;
 }
+
 #changeLog h2{
     text-align: left;
+    margin-bottom: 5px;
+}
+
+#dependencies {
+    padding-top: 20px;
+}
+
+#dependencies li{
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+#screenshots{
+    overflow-x: scroll;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+#screenshots li{
+    display: inline;
+}
+
+#screenshots img{
+    border-radius: 8px;
+    max-width: 90%;
+    max-height: 400px;
+    padding: 16px;
+    -webkit-user-drag: none;
 }
