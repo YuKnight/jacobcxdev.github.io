@@ -41,7 +41,7 @@ $(function(){
                                                                          });
 
                                             $(xml).find('change').each(function(){
-                                                                       $("#changeLog" ).append('<li>' + '<h1 id="changeVersion">' + $(this).find("changeVersion").text() + '</h1>');
+                                                                       $("#changeLog" ).append('<li>' + '<h1>' + $(this).find("changeVersion").text() + '</h1>');
                                                                        $(this).find('changeDescription').each(function(){
                                                                                                               $("#changeLog" ).append('<h2>' + $(this).text()+ '<h2>');
                                                                                                               });
