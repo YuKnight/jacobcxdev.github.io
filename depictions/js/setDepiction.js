@@ -33,7 +33,7 @@ $(function(){
                    });
 */
                    $(xml).find('br').each(function(){
-                       $("#description" ).append('<p>' +$(this).text()+ '</p>');
+                       $("#description" ).append('<li>' +$(this).text()+ '</li>');
                    });
 
                    $(xml).find('dependency').each(function(){
