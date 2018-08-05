@@ -28,6 +28,10 @@ $(function(){
                    document.getElementById("miniOS").innerHTML = $(this).find("miniOS").text();
                    document.getElementById("maxiOS").innerHTML = $(this).find("maxiOS").text();
 
+                   $(xml).find('br').each(function(){
+                       $("#br" ).append('<br/>');
+                   });
+
                    $(xml).find('description').each(function(){
                        $("#description" ).append('<p>' +$(this).text()+ '</p>');
                    });
