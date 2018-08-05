@@ -29,17 +29,9 @@ $(function(){
                                             document.getElementById("maxiOS").innerHTML = $(this).find("maxiOS").text();
                                             
                                             $(xml).find('description').each(function(){
-                                                                            $("#description" ).append('<li>' +$(this).text()+ '</li><br/><br/>')
+                                                                            $("#description" ) = ('<li>' +$(this).text()+ '</li>')
                                                                         });
 
-/*                                            $(xml).find('newpara').each(function(){
-                                                                            $("#description" ).append('<li>' +$(this).text()+ '</li><br/><br/>');
-                                                                        });
-
-                                            $(xml).find('newline').each(function(){
-                                                                        $("#description" ).append('<li>' +$(this).text()+ '</li><br/>');
-                                                                        });
-*/
                                             $(xml).find('dependency').each(function(){
                                                                            $("#dependencies" ).append('<li>' +$(this).text()+ '</li>');
                                                                            });
