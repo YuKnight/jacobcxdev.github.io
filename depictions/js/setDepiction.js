@@ -20,7 +20,7 @@ $(function(){
          
          // Parse the xml file and get data
          $(xml).find('packageInfo').each(function(){
-                                         // document.getElementById("packageTitle").innerHTML = $(this).find("name").text();
+                                         document.getElementById("packageTitle").innerHTML = $(this).find("name").text();
                                          //document.getElementById("bundleId").innerHTML = $(this).find("bundleId").text();
                                          //document.getElementById("version").innerHTML = $(this).find("version").text();
                                          
