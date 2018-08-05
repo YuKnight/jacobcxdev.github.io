@@ -29,7 +29,7 @@ $(function(){
                                             document.getElementById("maxiOS").innerHTML = $(this).find("maxiOS").text();
                                             
                                             $(xml).find('description').each(function(){
-                                                                            $("#description" ).innerHTML = $(this).text();
+                                                                            document.getElementById("description").innerHTML = $(this).text();
                                                                         });
 
                                             $(xml).find('dependency').each(function(){
