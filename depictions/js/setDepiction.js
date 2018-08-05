@@ -22,10 +22,10 @@ $(function(){
          $(xml).find('packageInfo').each(function(){
                                          document.getElementById("packageTitle").innerHTML = $(this).find("name").text();
                                          console.log("Parsed packageTitle");
-                                         //document.getElementById("bundleId").innerHTML = $(this).find("bundleId").text();
-                                         //console.log("Parsed bundleId");
-                                         //document.getElementById("version").innerHTML = $(this).find("version").text();
-                                         //console.log("Parsed version");
+                                         document.getElementById("bundleId").innerHTML = $(this).find("bundleId").text();
+                                         console.log("Parsed bundleId");
+                                         document.getElementById("version").innerHTML = $(this).find("version").text();
+                                         console.log("Parsed version");
                                          
                                          document.getElementById("miniOS").innerHTML = $(this).find("miniOS").text();
                                          document.getElementById("maxiOS").innerHTML = $(this).find("maxiOS").text();
