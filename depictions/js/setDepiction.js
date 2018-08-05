@@ -22,41 +22,45 @@ $(function(){
 
             // Parse the xml file and get data
             $(xml).find('packageInfo').each(function(){
-                  // document.getElementById("packageTitle").innerHTML = $(this).find("name").text();
-                   //document.getElementById("bundleId").innerHTML = $(this).find("bundleId").text();
-                   //document.getElementById("version").innerHTML = $(this).find("version").text();
-                   document.getElementById("miniOS").innerHTML = $(this).find("miniOS").text();
-                   document.getElementById("maxiOS").innerHTML = $(this).find("maxiOS").text();
+                                            // document.getElementById("packageTitle").innerHTML = $(this).find("name").text();
+                                            //document.getElementById("bundleId").innerHTML = $(this).find("bundleId").text();
+                                            //document.getElementById("version").innerHTML = $(this).find("version").text();
+                                            document.getElementById("miniOS").innerHTML = $(this).find("miniOS").text();
+                                            document.getElementById("maxiOS").innerHTML = $(this).find("maxiOS").text();
+                                            
+                                            $(xml).find('description').each(function(){
+                                                                            $("#description" ).append('<p>' +$(this).text()+ '</p>')
+                                                                        });
 
-                   $(xml).find('newpara').each(function(){
-                       $("#description" ).append('<li>' +$(this).text()+ '</li><br/><br/><br/>');
-                   });
+/*                                            $(xml).find('newpara').each(function(){
+                                                                            $("#description" ).append('<li>' +$(this).text()+ '</li><br/><br/>');
+                                                                        });
 
-                   $(xml).find('newline').each(function(){
-                       $("#description" ).append('<li>' +$(this).text()+ '</li><br/><br/>');
-                   });
+                                            $(xml).find('newline').each(function(){
+                                                                        $("#description" ).append('<li>' +$(this).text()+ '</li><br/>');
+                                                                        });
+*/
+                                            $(xml).find('dependency').each(function(){
+                                                                           $("#dependencies" ).append('<li>' +$(this).text()+ '</li>');
+                                                                           });
 
-                   $(xml).find('dependency').each(function(){
-                       $("#dependencies" ).append('<li>' +$(this).text()+ '</li>');
-                   });
+                                            $(xml).find('linkName').each(function(){
+                                                                         $("#dependencies" ).append('<li>' +$(this).text()+ '</li>');
+                                                                         });
 
-                   $(xml).find('linkName').each(function(){
-                       $("#dependencies" ).append('<li>' +$(this).text()+ '</li>');
-                   });
-
-                   $(xml).find('change').each(function(){
-                       $("#changeLog" ).append('<li>' + '<h1>' + $(this).find("changeVersion").text() + '</h1>');
-                       $(this).find('changeDescription').each(function(){
-                            $("#changeLog" ).append('<h2>' + $(this).text()+ '<h2>');
-                       });
-                       $("#changeLog" ).append('<li>');
-                   });
+                                            $(xml).find('change').each(function(){
+                                                                       $("#changeLog" ).append('<li>' + '<h1>' + $(this).find("changeVersion").text() + '</h1>');
+                                                                       $(this).find('changeDescription').each(function(){
+                                                                                                              $("#changeLog" ).append('<h2>' + $(this).text()+ '<h2>');
+                                                                                                              });
+                                                                       $("#changeLog" ).append('<li>');
+                                                                       });
 
 
+                                            });
+
+            }
             });
-
-        }
-    });
 
 
 });
