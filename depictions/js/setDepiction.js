@@ -45,7 +45,9 @@ $(function() {
                                          
                                          //Parse ios version
                                          var lowOS = document.getElementById("miniOS").innerHTML.trim().split('.');
+                                         console.log("lowOS = " + lowOS)
                                          var highOS = document.getElementById("maxiOS").innerHTML.trim().split('.');
+                                         console.log("highOS = " + highOS)
                                          var userOS = version.trim().split('.');
                                          var userIsLower = false;
                                          var userIsHigher = false;
