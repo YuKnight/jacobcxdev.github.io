@@ -25,7 +25,6 @@ $(function() {
                                                      });
                                          });
          });
-  });
 
 
 $("img").bind('dragstart', function() {
