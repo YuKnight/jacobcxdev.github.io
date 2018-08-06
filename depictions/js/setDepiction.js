@@ -36,87 +36,106 @@ $(function() {
                                          console.log("Parsed miniOS = " + $(this).find("miniOS").text() + " and maxiOS = " + $(this).find("maxiOS").text());
                                          
                                          
-                                         var UA = navigator.userAgent;
-                                         var regEx = /\iPhone OS ([^)]+)\like/;
-                                         var match = regEx.exec(UA);
+                                         var userAgent = navigator.userAgent;
+                                         var regExp = /iP(hone|ad; CPU) OS (\d|_){1,}/;
+                                         var match = regExp.exec(userAgent);
+                                         
                                          if (match != null) {
-                                         var deviceString = match.pop();
-                                         var version = deviceString.replace(/\_/g, '.');
+                                         var deviceString = match.shift();
+                                         var removeDevice = deviceString.replace(/(iPhone OS |iPad; CPU OS )/, "");
+                                         var version = removeDevice.replace(/\_/g, '.');
                                          
-                                         //Parse ios version
-                                         var lowOS = document.getElementById("miniOS").innerHTML.trim().split('.');
-                                         console.log("lowOS = " + lowOS);
-                                         var highOS = document.getElementById("maxiOS").innerHTML.trim().split('.');
-                                         console.log("highOS = " + highOS);
-                                         var userOS = version.trim().split('.');
+                                         var miniOS = $(this).find("miniOS").text();
+                                         var maxiOS = $(this).find("maxiOS").text();
+                                         var userOS = version.trim().split('.').map(Number);
                                          console.log("userOS = " + userOS);
-                                         var userIsLower = false;
-                                         var userIsHigher = false;
                                          
+                                         var isLower = false;
+                                         var isHigher = false;
                                          
-                                         if (lowOS.length > userOS.length) {
+                                         console.log("miniOS Length = " + miniOS.length);
+                                         console.log("maxiOS Length = " + maxiOS.length);
+                                         console.log("userOS Length = " + userOS.length);
+                                         
                                          var i = 0;
-                                         for (i = 0; i < userOS.length; ++i) {
-                                         if (lowOS[i] > userOS[i])
-                                         userIsLower = true;
-                                         console.log("userIsLower = true");
-                                         if (lowOS[i] < userOS[i])
-                                         console.log("userIsLower = false");
+                                         
+                                         if (miniOS.length > userOS.length) {
+                                         i = 0;
+                                         while (i <= miniOS.length) {
+                                         if (userOS[i] == null) {
+                                         userOS[i] = 0;
+                                         }
+                                         if (userOS[i] < miniOS[i]) {
+                                         isLower = true;
+                                         console.log("isLower = " + isLower);
+                                         } else if (userOS[i] != miniOS[i]) {
                                          break;
+                                         }
+                                         i += 1;
                                          }
                                          } else {
-                                         var i = 0;
-                                         for (i = 0; i < lowOS.length; ++i) {
-                                         if (lowOS[i] > userOS[i])
-                                         userIsLower = true;
-                                         console.log("userIsLower = true");
-                                         if (lowOS[i] < userOS[i])
-                                         console.log("userIsLower = false");
+                                         i = 0;
+                                         while (i <= miniOS.length) {
+                                         if (miniOS[i] == null) {
+                                         miniOS[i] = 0;
+                                         }
+                                         if (userOS[i] < miniOS[i]) {
+                                         isLower = true;
+                                         console.log("isLower = " + isLower);
+                                         } else if (userOS[i] != miniOS[i]) {
                                          break;
+                                         }
+                                         i += 1;
                                          }
                                          }
                                          
-                                         if (highOS.length > userOS.length) {
-                                         var i = 0;
-                                         for (i = 0; i < userOS.length; ++i) {
-                                         if (highOS[i] < userOS[i]) {
-                                         userIsHigher = true;
-                                         console.log("userIsHigher = true");
+                                         if (maxiOS.length > userOS.length) {
+                                         i = 0;
+                                         while (i <= userOS.length) {
+                                         if (userOS[i] == null) {
+                                         userOS[i] = 0;
                                          }
-                                         if (highOS[i] > userOS[i])
-                                         console.log("userIsHigher = false");
+                                         if (userOS[i] > maxiOS[i]) {
+                                         isHigher = true
+                                         console.log("isHigher = " + isHigher);
+                                         } else if (userOS[i] != maxiOS[i]) {
                                          break;
+                                         }
+                                         i += 1;
                                          }
                                          } else {
-                                         var i = 0;
-                                         for (i = 0; i < highOS.length; ++i) {
-                                         if (highOS[i] < userOS[i]) {
-                                         userIsHigher = true;
-                                         console.log("userIsHigher = true");
+                                         i = 0;
+                                         while (i <= userOS.length) {
+                                         if (maxiOS[i] == null) {
+                                         maxiOS[i] = 0;
                                          }
-                                         if (highOS[i] > userOS[i])
-                                         console.log("userIsHigher = false");
+                                         if (userOS[i] > maxiOS[i]) {
+                                         isHigher = true
+                                         console.log("isHigher = " + isHigher);
+                                         } else if (userOS[i] != maxiOS[i]) {
                                          break;
                                          }
-                                         if ((userOS[i] > 0) && (userOS[i - 1] == highOS[i - 1]))
-                                         userIsHigher = true;
-                                         console.log("userIsHigher = true");
+                                         i += 1;
+                                         }
                                          }
                                          
-                                         if(userIsHigher == false && userIsLower == false){
+                                         if (!isLower && !isHigher) {
                                          document.getElementById("Compatibility").style["backgroundColor"] = "rgba(109, 255, 145, 1)";
                                          document.getElementById("Compatibility").style["boxShadow"] = "rgba(109, 255, 145, 1) 0px 0px 10px";
                                          document.getElementById("youriOS").innerHTML = "Your device is compatible.";
                                          document.getElementById("compatibilityIcon").innerHTML = "😀";
                                          console.log("Device compatible");
-                                         
-                                         } else {
+                                         } else if (isLower) {
                                          document.getElementById("Compatibility").style["backgroundColor"] = "rgba(255, 81, 81, 0.75)";
                                          document.getElementById("Compatibility").style["boxShadow"] = "0px 0px 10px rgba(255, 81, 81, 0.75)";
-                                         document.getElementById("youriOS").innerHTML = "Your device is not compatible.";
+                                         document.getElementById("youriOS").innerHTML = "Your device's iOS version is too low, and thus not compatible.";
                                          document.getElementById("compatibilityIcon").innerHTML = "😞";
-                                         console.log("Device incompatible");
-                                         
+                                         document.getElementById("Compatibility").style["backgroundColor"] = "rgba(255, 81, 81, 0.75)";
+                                         document.getElementById("Compatibility").style["boxShadow"] = "0px 0px 10px rgba(255, 81, 81, 0.75)";
+                                         document.getElementById("youriOS").innerHTML = "Your device's iOS version is too high, and thus not compatible.";
+                                         document.getElementById("compatibilityIcon").innerHTML = "😞";
+                                         } else if (isHigher) {
+                                         console.log("Too High")
                                          }
                                          } else {
                                          document.getElementById("Compatibility").style["backgroundColor"] = "rgba(255, 215, 0, 0.75)";
@@ -124,7 +143,6 @@ $(function() {
                                          document.getElementById("youriOS").innerHTML = "Your device could not be identified.";
                                          document.getElementById("compatibilityIcon").innerHTML = "⚠️";
                                          console.log("Device unidentified");
-                                         
                                          }
                                          
                                          $(xml).find('description').each(function() {
