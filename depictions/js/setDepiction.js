@@ -27,7 +27,7 @@ $(function() {
                                          document.getElementById("author").innerHTML = $(this).find("author").text();
                                          console.log("Parsed author");
                                          
-                                         if $(this).find("author").text() != "" {
+                                         if ($(this).find("author").text() != "") {
                                          document.getElementById("By").innerHTML = "By";
                                          }
                                          
