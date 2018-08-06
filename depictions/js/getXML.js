@@ -23,7 +23,7 @@ $(function() {
                                          $.getScript("setDepicion.js", function() {
                                                      console.log("Script loaded but not necessarily executed.");
                                                      });
-         }
+                                         });
          });
   });
 
