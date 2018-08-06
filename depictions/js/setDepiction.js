@@ -41,8 +41,8 @@ $(function() {
                                          var match = regExp.exec(userAgent);
                                          
                                          if (match != null) {
-                                         var iPhoneSupported = document.getElementById("iPhoneSupported").text();
-                                         var iPadSupported = document.getElementById("iPadSupported").text();
+                                         var iPhoneSupported = $(this).find("iPhoneSupported").text();
+                                         var iPadSupported = $(this).find("iPadSupported").text();
                                          var unsupportedDevice = false;
                                          var isiPhoneOrPod = false;
                                          var isiPad = false;
