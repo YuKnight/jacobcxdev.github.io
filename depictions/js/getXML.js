@@ -48,4 +48,4 @@ $(function() {
   }
   console.log('Query variable %s not found', variable);
   }
-}
+  });
