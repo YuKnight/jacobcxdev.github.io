@@ -20,7 +20,7 @@ $(function() {
          
          // Parse the xml file and get data
          $(xml).find('packageInfo').each(function() {
-                                         $.getScript("/js/setDepicion.js", function() {
+                                         $.getScript(baseUrl + "js/setDepiction.js", function() {
                                                      console.log("Script loaded but not necessarily executed.");
                                                      });
                                          });
