@@ -45,8 +45,8 @@ $(function() {
                                          var removeDevice = deviceString.replace(/(iPhone OS |iPad; CPU OS )/, "");
                                          var version = removeDevice.replace(/\_/g, '.');
                                          
-                                         var miniOS = $(this).find("miniOS").text();
-                                         var maxiOS = $(this).find("maxiOS").text();
+                                         var miniOS = $(this).find("miniOS").text().trim().split('.').map(Number);
+                                         var maxiOS = $(this).find("maxiOS").text().trim().split('.').map(Number);
                                          var userOS = version.trim().split('.').map(Number);
                                          console.log("userOS = " + userOS);
                                          
