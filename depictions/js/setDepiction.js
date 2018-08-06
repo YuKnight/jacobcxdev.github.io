@@ -149,7 +149,7 @@ $(function() {
                                          }
                                          
                                          if (!isLower && !isHigher) {
-                                         ocument.getElementById("Compatibility").style["backgroundColor"] = "rgba(109, 255, 145, 1)";
+                                         document.getElementById("Compatibility").style["backgroundColor"] = "rgba(109, 255, 145, 1)";
                                          document.getElementById("Compatibility").style["boxShadow"] = "rgba(109, 255, 145, 1) 0px 0px 10px";
                                          document.getElementById("youriOS").innerHTML = "Your " + userDevice + " is compatible.";
                                          document.getElementById("compatibilityIcon").innerHTML = "😆";;
