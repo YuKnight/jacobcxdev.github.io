@@ -49,6 +49,7 @@ $(function() {
                                          var userDevice = "unidentified";
                                          
                                          var deviceString = match.shift();
+                                         console.log(deviceString);
                                          var removeDevice = deviceString.replace(/(iPhone OS |iPad; CPU OS )/, "");
                                          
                                          var iPhoneCheckRegExp = /iPhone OS /;
@@ -151,26 +152,26 @@ $(function() {
                                          ocument.getElementById("Compatibility").style["backgroundColor"] = "rgba(109, 255, 145, 1)";
                                          document.getElementById("Compatibility").style["boxShadow"] = "rgba(109, 255, 145, 1) 0px 0px 10px";
                                          document.getElementById("youriOS").innerHTML = "Your " + userDevice + " is compatible.";
-                                         document.getElementById("compatibilityIcon").innerHTML = "👍";;
+                                         document.getElementById("compatibilityIcon").innerHTML = "😆";;
                                          console.log("Your " + userDevice + " is compatible.")
                                          } else if (isLower) {
                                          document.getElementById("Compatibility").style["backgroundColor"] = "rgba(255, 81, 81, 0.75)";
                                          document.getElementById("Compatibility").style["boxShadow"] = "0px 0px 10px rgba(255, 81, 81, 0.75)";
                                          document.getElementById("youriOS").innerHTML = "Your " + userDevice + "'s iOS version is too low, and thus not compatible.";
-                                         document.getElementById("compatibilityIcon").innerHTML = "👎";
+                                         document.getElementById("compatibilityIcon").innerHTML = "😔";
                                          console.log("Your " + userDevice + "'s iOS version is too low.");
                                          } else if (isHigher) {
                                          document.getElementById("Compatibility").style["backgroundColor"] = "rgba(255, 81, 81, 0.75)";
                                          document.getElementById("Compatibility").style["boxShadow"] = "0px 0px 10px rgba(255, 81, 81, 0.75)";
                                          document.getElementById("youriOS").innerHTML = "Your " + userDevice + "'s iOS version is too high, and thus not compatible.";
-                                         document.getElementById("compatibilityIcon").innerHTML = "👎";
+                                         document.getElementById("compatibilityIcon").innerHTML = "😔";
                                          console.log("Your " + userDevice + "'s iOS version is too high.");
                                          }
                                          } else {
                                          document.getElementById("Compatibility").style["backgroundColor"] = "rgba(255, 81, 81, 0.75)";
                                          document.getElementById("Compatibility").style["boxShadow"] = "0px 0px 10px rgba(255, 81, 81, 0.75)";
                                          document.getElementById("youriOS").innerHTML = "Your " + userDevice + " is unsupported by this package.";
-                                         document.getElementById("compatibilityIcon").innerHTML = "👎";
+                                         document.getElementById("compatibilityIcon").innerHTML = "😔";
                                          console.log("Your " + userDevice + " is unsupported by this package.");
                                          }
                                          
