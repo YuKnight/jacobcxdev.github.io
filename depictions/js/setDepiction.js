@@ -41,24 +41,49 @@ $(function() {
                                          var match = regExp.exec(userAgent);
                                          
                                          if (match != null) {
+                                         var iPhoneSupported = false;
+                                         var iPadSupported = true;
+                                         var unsupportedDevice = false;
+                                         var isiPhoneOrPod = false;
+                                         var isiPad = false;
+                                         var userDevice = "unidentified";
+                                         
                                          var deviceString = match.shift();
                                          var removeDevice = deviceString.replace(/(iPhone OS |iPad; CPU OS )/, "");
+                                         
+                                         var iPhoneCheckRegExp = /iPhone OS /;
+                                         var iPhoneCheck = iPhoneCheckRegExp.exec(deviceString);
+                                         
+                                         if (iPhoneCheck == null) {
+                                         isiPad = true;
+                                         } else {
+                                         isiPhoneOrPod = true;
+                                         }
+                                         
+                                         if (!iPhoneSupported && isiPhoneOrPod) {
+                                         unsupportedDevice = true;
+                                         } else if (!iPadSupported && isiPad) {
+                                         unsupportedDevice = true;
+                                         }
+                                         
+                                         if (isiPhoneOrPod) {
+                                         userDevice = "iPhone/iPod";
+                                         } else {
+                                         userDevice = "iPad";
+                                         }
+                                         
+                                         if (!unsupportedDevice) {
                                          var version = removeDevice.replace(/\_/g, '.');
                                          
                                          var miniOS = $(this).find("miniOS").text().trim().split('.').map(Number);
+                                         console.log("miniOS = " + miniOS);
                                          var maxiOS = $(this).find("maxiOS").text().trim().split('.').map(Number);
+                                         console.log("maxiOS = " + maxiOS);
                                          var userOS = version.trim().split('.').map(Number);
                                          console.log("userOS = " + userOS);
                                          
                                          var isLower = false;
                                          var isHigher = false;
-                                         
-                                         console.log("miniOS Length = " + miniOS.length);
-                                         console.log(miniOS);
-                                         console.log("maxiOS Length = " + maxiOS.length);
-                                         console.log(maxiOS);
-                                         console.log("userOS Length = " + userOS.length);
-                                         console.log(userOS);
                                          
                                          var i = 0;
                                          
@@ -123,28 +148,38 @@ $(function() {
                                          }
                                          
                                          if (!isLower && !isHigher) {
-                                         document.getElementById("Compatibility").style["backgroundColor"] = "rgba(109, 255, 145, 1)";
+                                         ocument.getElementById("Compatibility").style["backgroundColor"] = "rgba(109, 255, 145, 1)";
                                          document.getElementById("Compatibility").style["boxShadow"] = "rgba(109, 255, 145, 1) 0px 0px 10px";
-                                         document.getElementById("youriOS").innerHTML = "Your device is compatible.";
-                                         document.getElementById("compatibilityIcon").innerHTML = "😀";
-                                         console.log("Device compatible");
+                                         document.getElementById("youriOS").innerHTML = "Your " + userDevice + " is compatible.";
+                                         document.getElementById("compatibilityIcon").innerHTML = "👍";
+                                         console.log("Your " + userDevice + " is compatible.")
                                          } else if (isLower) {
                                          document.getElementById("Compatibility").style["backgroundColor"] = "rgba(255, 81, 81, 0.75)";
                                          document.getElementById("Compatibility").style["boxShadow"] = "0px 0px 10px rgba(255, 81, 81, 0.75)";
-                                         document.getElementById("youriOS").innerHTML = "Your device's iOS version is too low, and thus not compatible.";
-                                         document.getElementById("compatibilityIcon").innerHTML = "😞";
+                                         document.getElementById("youriOS").innerHTML = "Your " + userDevice + "'s iOS version is too low, and thus not compatible.";
+                                         document.getElementById("compatibilityIcon").innerHTML = "👎";
+                                         console.log("Your " + userDevice + "'s iOS version is too low.")
                                          } else if (isHigher) {
                                          document.getElementById("Compatibility").style["backgroundColor"] = "rgba(255, 81, 81, 0.75)";
                                          document.getElementById("Compatibility").style["boxShadow"] = "0px 0px 10px rgba(255, 81, 81, 0.75)";
-                                         document.getElementById("youriOS").innerHTML = "Your device's iOS version is too high, and thus not compatible.";
-                                         document.getElementById("compatibilityIcon").innerHTML = "😞";
+                                         document.getElementById("youriOS").innerHTML = "Your " + userDevice + "'s iOS version is too high, and thus not compatible.";
+                                         document.getElementById("compatibilityIcon").innerHTML = "👎";
                                          }
+                                         } else {
+                                         document.getElementById("Compatibility").style["backgroundColor"] = "rgba(255, 81, 81, 0.75)";
+                                         document.getElementById("Compatibility").style["boxShadow"] = "0px 0px 10px rgba(255, 81, 81, 0.75)";
+                                         document.getElementById("youriOS").innerHTML = "Your " + userDevice + " is unsupported by this package.";
+                                         document.getElementById("compatibilityIcon").innerHTML = "👎";
+                                         console.log("Your " + userDevice + " is unsupported by this package.")
+                                         }
+                                         
                                          } else {
                                          document.getElementById("Compatibility").style["backgroundColor"] = "rgba(255, 215, 0, 0.75)";
                                          document.getElementById("Compatibility").style["boxShadow"] = "0px 0px 10px rgba(255, 215, 0, 0.75)";
                                          document.getElementById("youriOS").innerHTML = "Your device could not be identified.";
                                          document.getElementById("compatibilityIcon").innerHTML = "⚠️";
-                                         console.log("Device unidentified");
+                                         console.log("Your device is unidentified.")
+                                         }
                                          }
                                          
                                          $(xml).find('description').each(function() {
