@@ -104,14 +104,14 @@ $(function() {
                                          
                                          if(userIsHigher == false && userIsLower == false){
                                          document.getElementById("Compatibility").style["backgroundColor"] = "rgba(109, 255, 145, 1)";
-                                         document.getElementByID("Compatibility").style["boxShadow"] = "rgba(109, 255, 145, 1) 0px 0px 10px";
+                                         document.getElementById("Compatibility").style["boxShadow"] = "rgba(109, 255, 145, 1) 0px 0px 10px";
                                          document.getElementById("youriOS").innerHTML = "Your device is compatible.";
                                          document.getElementById("compatibilityIcon").innerHTML = "😀";
                                          console.log("Device compatible");
                                          
                                          } else {
                                          document.getElementById("Compatibility").style["backgroundColor"] = "rgba(255, 81, 81, 0.75)";
-                                         document.getElementByID("Compatibility").style["boxShadow"] = "0px 0px 10px rgba(255, 81, 81, 0.75)";
+                                         document.getElementById("Compatibility").style["boxShadow"] = "0px 0px 10px rgba(255, 81, 81, 0.75)";
                                          document.getElementById("youriOS").innerHTML = "Your device is not compatible.";
                                          document.getElementById("compatibilityIcon").innerHTML = "😞";
                                          console.log("Device incompatible");
@@ -119,7 +119,7 @@ $(function() {
                                          }
                                          } else {
                                          document.getElementById("Compatibility").style["backgroundColor"] = "rgba(255, 215, 0, 0.75)";
-                                         document.getElementByID("Compatibility").style["boxShadow"] = "0px 0px 10px rgba(255, 215, 0, 0.75)";
+                                         document.getElementById("Compatibility").style["boxShadow"] = "0px 0px 10px rgba(255, 215, 0, 0.75)";
                                          document.getElementById("youriOS").innerHTML = "Your device could not be identified.";
                                          document.getElementById("compatibilityIcon").innerHTML = "⚠️";
                                          console.log("Device unidentified");
