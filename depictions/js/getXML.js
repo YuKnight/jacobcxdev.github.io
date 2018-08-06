@@ -24,6 +24,7 @@ $(function() {
                                                      console.log("Script loaded but not necessarily executed.");
                                                      });
                                          });
+         }
          });
 
 
