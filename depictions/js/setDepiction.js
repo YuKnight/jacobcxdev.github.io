@@ -54,8 +54,11 @@ $(function() {
                                          var isHigher = false;
                                          
                                          console.log("miniOS Length = " + miniOS.length);
+                                         console.log(miniOS);
                                          console.log("maxiOS Length = " + maxiOS.length);
+                                         console.log(maxiOS);
                                          console.log("userOS Length = " + userOS.length);
+                                         console.log(userOS);
                                          
                                          var i = 0;
                                          
