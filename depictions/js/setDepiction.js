@@ -21,8 +21,8 @@ $(function() {
          // Parse the xml file and get data
          $(xml).find('packageInfo').each(function() {
                                          
-                                         document.getElementById("icons").src = "https://jacobcxdev.github.io/sections/" + $(this).find("section").text().replace(/ /g, "_") + ".png";
-                                         document.getElementById("icons").alt = $(this).find("section").text();
+                                         document.getElementById("sectionIcon").src = "https://jacobcxdev.github.io/sections/" + $(this).find("section").text().replace(/ /g, "_") + ".png";
+                                         document.getElementById("sectionIcon").alt = $(this).find("section").text();
                                          
                                          document.getElementById("name").innerHTML = $(this).find("name").text();
                                          console.log("Parsed name");
