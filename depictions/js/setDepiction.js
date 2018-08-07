@@ -20,6 +20,10 @@ $(function() {
          
          // Parse the xml file and get data
          $(xml).find('packageInfo').each(function() {
+                                         
+                                         document.getElementById("icons").src = "https://jacobcxdev.github.io/sections/" + $(this).find("section").text().replace(/ /g, "_") + ".png";
+                                         document.getElementById("icons").alt = $(this).find("section").text();
+                                         
                                          document.getElementById("name").innerHTML = $(this).find("name").text();
                                          console.log("Parsed name");
                                          document.getElementById("version").innerHTML = "v" + $(this).find("version").text();
@@ -196,9 +200,12 @@ $(function() {
                                          $(xml).find('change').each(function() {
                                                                     $("#changeLog").append('<li class="changeVersion">' + "v" + $(this).find("changeVersion").text() + '</li>');
                                                                     console.log("Parsed changeVersion: " + $(this).text());
-                                                                    $("#changeLog").append('<ul class="changeDescription" id="' + $(this).find("changeVersion").text() + '">' + '</ul>');
+                                                                    
+                                                                    var changeDescriptionID = $(this).find("changeVersion").text().replace(/[^\d]/g, "_");
+                                                                    
+                                                                    $("#changeLog").append('<ul class="changeDescription" id="' + changeDescriptionID + '">' + '</ul>');
                                                                     $(this).find('changeDescription').each(function() {
-                                                                                                           $("#" + $(this).find("changeVersion").text()).append('<li>' + $(this).text() + '<li>');
+                                                                                                           $("#" + changeDescriptionID).append('<li>' + $(this).text() + '</li>');
                                                                                                            console.log("Parsed changeDescription: " + $(this).text());
                                                                                                            });
                                                                     });
