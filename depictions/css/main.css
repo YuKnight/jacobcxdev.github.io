@@ -185,7 +185,7 @@ body {
         display: none;
     }
     ::-webkit-scrollbar-thumb {
-        background: lightgrey;
+        background: white;
     }
 }
 
