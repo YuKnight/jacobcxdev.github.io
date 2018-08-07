@@ -194,13 +194,14 @@ $(function() {
                                                                         });
                                          
                                          $(xml).find('change').each(function() {
-                                                                    $("#changeLog").append('<li>' + '<h1>' + "v" + $(this).find("changeVersion").text() + '</h1>');
+                                                                    $("#changeLog").append('<li id="changeVersion">' + "v" + $(this).find("changeVersion").text() + '</li>');
+                                                                    console.log("Parsed changeVersion: " + $(this).text());
+                                                                    $("#changeLog").append('<ul id="changeDescription">');
                                                                     $(this).find('changeDescription').each(function() {
-                                                                                                           $("#changeLog").append('<h2>' + $(this).text() + '<h2>');
+                                                                                                           $("#changeLog").append('<li>' + $(this).text() + '<li>');
                                                                                                            console.log("Parsed changeDescription: " + $(this).text());
                                                                                                            });
-                                                                    $("#changeLog").append('<li>');
-                                                                    console.log("Parsed changeVersion: " + $(this).text());
+                                                                    $("#changeLog").append('</ul>');
                                                                     });
                                          
                                          $(xml).find('screen').each(function() {
