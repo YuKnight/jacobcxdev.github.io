@@ -1,0 +1,25 @@
+<packageInfo>
+    <bundleId></bundleId>
+    <name></name>
+    <version></version>
+    <author></author>
+    <description></description>
+    <compatibility>
+        <miniOS></miniOS>
+        <maxiOS></maxiOS>
+        <iPhoneSupported></iPhoneSupported>
+        <iPadSupported></iPadSupported>
+    </compatibility>
+    <dependencies>
+        <dependency></dependency>
+    </dependencies>
+    <changelog>
+        <change>
+            <changeVersion></changeVersion>
+            <changeDescription></changeDescription>
+        </change>
+    </changelog>
+    <screenshots>
+        <screen></screen>
+    </screenshots>
+</packageInfo>

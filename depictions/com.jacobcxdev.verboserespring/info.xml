@@ -39,6 +39,8 @@ This is the "Verbose" respring animation.</description>
     <compatibility>
         <miniOS>11.0</miniOS>
         <maxiOS>11.4</maxiOS>
+        <iPhoneSupported>true</iPhoneSupported>
+        <iPadSupported>false</iPadSupported>
     </compatibility>
     <dependencies>
         <dependency>mobilesubstrate</dependency>
