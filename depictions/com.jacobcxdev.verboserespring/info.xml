@@ -2,6 +2,7 @@
     <bundleId>com.osctardo.verboserespring</bundleId>
     <name>VerboseRespring</name>
     <version>1.0.0</version>
+    <section>Themes</section>
     <author>Osctardo</author>
     <description>A verbose respring animation for Anemone.
 

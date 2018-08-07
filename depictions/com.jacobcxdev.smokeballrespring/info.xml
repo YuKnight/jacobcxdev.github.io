@@ -2,6 +2,7 @@
     <bundleId>com.osctardo.smokeballrespring</bundleId>
     <name>SmokeBallRespring</name>
     <version>1.0.0</version>
+    <section>Themes</section>
     <author>Osctardo</author>
     <description>A smoke ball respring animation for Anemone.
 
