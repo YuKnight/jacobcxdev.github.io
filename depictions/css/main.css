@@ -181,6 +181,7 @@ body {
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar;
+    -ms-scrollbar-face-color: white;
     &::-webkit-scrollbar {
         display: none;
     }
