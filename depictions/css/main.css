@@ -180,8 +180,12 @@ body {
     overflow-x: scroll;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
     &::-webkit-scrollbar {
         display: none;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: lightgrey;
     }
 }
 
