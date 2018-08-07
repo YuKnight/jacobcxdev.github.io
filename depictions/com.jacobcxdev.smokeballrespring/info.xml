@@ -48,7 +48,7 @@ This is the "Smoke Ball" respring animation.</description>
     </dependencies>
     <changelog>
         <change>
-            <changeVersion>V1.0.0</changeVersion>
+            <changeVersion>1.0.0</changeVersion>
             <changeDescription>Initial Release</changeDescription>
         </change>
     </changelog>
