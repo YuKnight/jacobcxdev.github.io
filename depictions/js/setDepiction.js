@@ -194,14 +194,13 @@ $(function() {
                                                                         });
                                          
                                          $(xml).find('change').each(function() {
-                                                                    $("#changeLog").append('<li id="changeVersion">' + "v" + $(this).find("changeVersion").text() + '</li>');
+                                                                    $("#changeLog").append('<li class="changeVersion">' + "v" + $(this).find("changeVersion").text() + '</li>');
                                                                     console.log("Parsed changeVersion: " + $(this).text());
-                                                                    $("#changeLog").append('<ul id="changeDescription">');
+                                                                    $("#changeLog").append('<ul class="changeDescription" id="' + $(this).find("changeVersion").text() + '">' + '</ul>');
                                                                     $(this).find('changeDescription').each(function() {
-                                                                                                           $("#changeLog").append('<li>' + $(this).text() + '<li>');
+                                                                                                           $("#" + $(this).find("changeVersion").text()).append('<li>' + $(this).text() + '<li>');
                                                                                                            console.log("Parsed changeDescription: " + $(this).text());
                                                                                                            });
-                                                                    $("#changeLog").append('</ul>');
                                                                     });
                                          
                                          $(xml).find('screen').each(function() {
