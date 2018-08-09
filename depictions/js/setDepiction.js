@@ -13,7 +13,7 @@ $(function() {
   
   $.ajax({
          type: "GET",
-         url: pathTo + "info.xml",
+         url: pathTo + "/info.xml",
          dataType: "xml",
          success: function(xml) {
          console.log("Beginning XML Parsing");
