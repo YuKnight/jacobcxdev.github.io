@@ -161,13 +161,13 @@ $(function() {
                                          } else if (isLower) {
                                          document.getElementById("Compatibility").style["backgroundColor"] = "rgba(255, 81, 81, 0.75)";
                                          document.getElementById("Compatibility").style["boxShadow"] = "0px 0px 10px rgba(255, 81, 81, 0.75)";
-                                         document.getElementById("youriOS").innerHTML = "Your " + userDevice + "'s iOS version is too low, and thus not compatible.";
+                                         document.getElementById("youriOS").innerHTML = "Your " + userDevice + "'s iOS version is too low, and thus is not compatible.";
                                          document.getElementById("compatibilityIcon").innerHTML = "😔";
                                          console.log("Your " + userDevice + "'s iOS version is too low.");
                                          } else if (isHigher) {
                                          document.getElementById("Compatibility").style["backgroundColor"] = "rgba(255, 81, 81, 0.75)";
                                          document.getElementById("Compatibility").style["boxShadow"] = "0px 0px 10px rgba(255, 81, 81, 0.75)";
-                                         document.getElementById("youriOS").innerHTML = "Your " + userDevice + "'s iOS version is too high, and thus not compatible.";
+                                         document.getElementById("youriOS").innerHTML = "Your " + userDevice + "'s iOS version is too high, and thus is not compatible.";
                                          document.getElementById("compatibilityIcon").innerHTML = "😔";
                                          console.log("Your " + userDevice + "'s iOS version is too high.");
                                          }
