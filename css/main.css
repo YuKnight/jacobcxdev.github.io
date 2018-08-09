@@ -23,25 +23,31 @@ time, mark, audio, video {
     font: inherit;
     vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
+
 body {
     line-height: 1;
 }
+
 ol, ul {
     list-style: none;
 }
+
 blockquote, q {
     quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
     content: '';
     content: none;
 }
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -52,14 +58,50 @@ body {
     padding: 0;
     background-color: black;
     -webkit-font-smoothing: antialiased;
-    margin: 0;
     font: 14px -apple-system-font,".Helvetica NeueUI","Helvetica Neue",sans-serif;
     width: 100%;
-    padding-bottom: 50px;
-    color: white;
+    padding-bottom: 40px;
 }
 
-.outerTitleBox {
+img {
+    vertical-align: middle;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.titleContainer {
+    margin-bottom: 10px;
+    width: 90vw;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.outerIcons {
+    background-color: #101010;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+}
+
+#repo {
+    float: left;
+}
+
+#cydia {
+    float: right;
+}
+
+.icons {
+    width: 64px;
+    height: 64px;
+    border-radius: 10px;
+}
+
+.outerBox {
     padding: 10px;
     margin-left: auto;
     margin-right: auto;
@@ -74,7 +116,7 @@ body {
     margin-right: auto;
     text-align: center;
     color: white;
-    box-shadow: 0px 0px 10px #101010;
+    box-shadow: 0px 0px 20px #101010;
     display: inline-block;
 }
 
@@ -113,12 +155,6 @@ body {
     font-weight: bold;
 }
 
-#version{
-    float: center;
-    font-size: 10px;
-    margin-bottom: 10px
-}
-
 #by {
     display: inline-block;
     font-size: 11px
@@ -127,6 +163,7 @@ body {
 #author {
     float: center;
     display: inline-block;
+    padding-top: 10px;
 }
 
 #compatibilityIcon, #compatibilitySide{
@@ -152,28 +189,31 @@ body {
 }
 
 #changeLog {
-    text-align: left;
+    text-align: center;
     padding-bottom: 20px;
 }
 
-#changeLog h1{
+.changeVersion {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 5px;
+    font-size: 15px;
 }
 
-#changeLog h2{
+.changeDescription li {
     text-align: left;
-    margin-bottom: 5px;
-}
-
-#dependencies {
-    padding-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    list-style: circle;
 }
 
 #dependencies li{
     text-align: left;
+    margin-top: 10px;
     margin-bottom: 10px;
+    margin-left: 15px;
+    list-style: circle;
 }
 
 #screenshots{
@@ -181,19 +221,68 @@ body {
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar;
-    &::-webkit-scrollbar {
-        display: none;
-    }
 }
 
-#screenshots li{
+#screenshots li {
     display: inline;
 }
 
-#screenshots img{
+#screenshots img {
     border-radius: 8px;
     max-width: 90%;
     max-height: 400px;
     padding: 16px;
     -webkit-user-drag: none;
+}
+
+#contactTitle {
+    margin-top: 80px;
+    font-weight: bold;
+}
+
+.contactBox {
+    background-color: #101010;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: white;
+    box-shadow: 0px 0px 20px #101010;
+    display: inline-block;
+}
+
+.contact {
+    display: inline-block;
+    padding: 10px;
+}
+
+.contactIcon {
+    width: 64px;
+    height: 64px;
+    padding: 20px;
+}
+
+.contact h1 {
+    font-weight: bold;
+}
+
+#twitter {
+    color: #00aced;
+}
+
+#reddit {
+    color: #ff4500;
+}
+
+#gmail {
+    color: #d44638;
+}
+
+#discord {
+    color: #7289da;
+}
+
+#snapchat {
+    color: #fffc00;
 }
