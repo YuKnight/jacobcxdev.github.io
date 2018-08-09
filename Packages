@@ -1,0 +1,45 @@
+Package: com.jacobcxdev.AppleMalwareRespring
+Version: 1.0.0
+Section: Themes
+Maintainer: J{x} <jacobcxdev@gmail.com>
+Depends: mobilesubstrate, com.anemonetheming.anemone
+Conflicts: com.wizages.bae
+Architecture: iphoneos-arm
+Filename: .//debs/com.jacobcxdev.applemalwarerespring.deb
+Size: 35304552
+MD5sum: f8e534bc2261b5aa0c88e49d555f5ac3
+Description: Glitchy respring animation for Anemone.
+Name: AppleMalwareRespring
+Author: Osctardo <osctardodev@icloud.com>
+Depiction: https://jacobcxdev.github.io/depictions/?p=com.jacobcxdev.applemalwarerespring/
+
+Package: com.jacobcxdev.smokeballrespring
+Version: 1.0.0
+Section: Themes
+Maintainer: J{x} <jacobcxdev@gmail.com>
+Depends: mobilesubstrate, com.anemonetheming.anemone
+Conflicts: com.wizages.bae
+Architecture: iphoneos-arm
+Filename: .//debs/com.jacobcxdev.smokeballrespring.deb
+Size: 16549408
+MD5sum: e2183cf738403e6274adcce947bf6d12
+Description: A smoke ball animation for Anemone.
+Name: SmokeBallRespring
+Author: Osctardo <osctardodev@icloud.com>
+Depiction: https://jacobcxdev.github.io/depictions/?p=com.jacobcxdev.smokeballrespring/
+
+Package: com.jacobcxdev.verboserespring
+Version: 1.0.0
+Section: Themes
+Maintainer: J{x} <jacobcxdev@gmail.com>
+Depends: mobilesubstrate, com.anemonetheming.anemone
+Conflicts: com.wizages.bae
+Architecture: iphoneos-arm
+Filename: .//debs/com.jacobcxdev.verboserespring.deb
+Size: 18914296
+MD5sum: 68379fb87ffc38b87226694394211e17
+Description: A verbose respring animation for Anemone.
+Name: VerboseRespring
+Author: Osctardo <osctardodev@icloud.com>
+Depiction: https://jacobcxdev.github.io/depictions/?p=com.jacobcxdev.verboserespring/
+
