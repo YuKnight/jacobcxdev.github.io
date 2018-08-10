@@ -165,8 +165,7 @@ a {
 
 #by {
     display: inline-block;
-    font-size: 11px;
-    margin-right: 5px;
+    font-size: 11px
 }
 
 #author {
@@ -201,6 +200,7 @@ a {
 .package h1 {
     font-size: 15px;
     padding-bottom: 5px;
+    font-weight: bold;
 }
 
 .sectionIcon {
@@ -228,12 +228,13 @@ a {
 
 .contact {
     display: inline-block;
-    padding: 20px;
+    padding: 10px;
 }
 
 .contactIcon {
     width: 64px;
     height: 64px;
+    padding: 20px;
 }
 
 .contact h1 {
