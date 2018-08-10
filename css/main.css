@@ -229,13 +229,12 @@ a {
 
 .contact {
     display: inline-block;
-    padding: 10px;
+    padding: 20px;
 }
 
 .contactIcon {
     width: 64px;
     height: 64px;
-    padding: 20px;
 }
 
 .contact h1 {
