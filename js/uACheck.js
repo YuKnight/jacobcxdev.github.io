@@ -1,11 +1,13 @@
 function uACheck() {
+    var userAgent = navigator.userAgent;
+    console.log(userAgent);
     var searchString = /(iP(hone|ad)|Cydia)/;
-    var uASearch = navigator.userAgent.exec(searchString);
+    var uASearch = searchString.exec(userAgent);
     console.log(uASearch);
     
     if (uASearch != null) {
         var cydia = /Cydia/;
-        var cydiaSearch = navigator.userAgent.exec(cydia);
+        var cydiaSearch = cydia.exec(userAgent);
         console.log(cydiaSearch);
         
         if (cydiaSearch != null) {
