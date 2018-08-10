@@ -13,7 +13,7 @@ $.getJSON("https://cydia.s0n1c.org/cydia/?url=https://jacobcxdev.github.io/", fu
                         // Parse the xml file and get data
                         $(xml).find('packageInfo').each(function() {
                                                         
-                                                        var sectionIcon = "https://jacobcxdev.github.io/sections/" + $(this).find("section").text().replace(/ /g, "_") + ".png";
+                                                        var sectionIcon = "sections/" + $(this).find("section").text().replace(/ /g, "_") + ".png";
                                                         var sectionIconAlt = $(this).find("section").text();
                                                         
                                                         var name = $(this).find("name").text();
