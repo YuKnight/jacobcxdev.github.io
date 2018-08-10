@@ -21,7 +21,7 @@ $(function() {
          // Parse the xml file and get data
          $(xml).find('packageInfo').each(function() {
                                          
-                                         document.getElementById("sectionIcon").src = "sections/" + $(this).find("section").text().replace(" ", "_") + ".png";
+                                         document.getElementById("sectionIcon").src = "../sections/" + $(this).find("section").text().replace(" ", "_") + ".png";
                                          document.getElementById("sectionIcon").alt = $(this).find("section").text();
                                          
                                          document.getElementById("name").innerHTML = $(this).find("name").text();
