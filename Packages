@@ -6,8 +6,8 @@ Depends: mobilesubstrate, com.anemonetheming.anemone
 Conflicts: com.wizages.bae
 Architecture: iphoneos-arm
 Filename: .//debs/com.jacobcxdev.applemalwarerespring.deb
-Size: 35304552
-MD5sum: f8e534bc2261b5aa0c88e49d555f5ac3
+Size: 35303560
+MD5sum: e1764e5f1c679e18f0f2ab61bf1afdb3
 Description: Glitchy respring animation for Anemone.
 Name: AppleMalwareRespring
 Author: Osctardo <osctardodev@icloud.com>
