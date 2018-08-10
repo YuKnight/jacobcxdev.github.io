@@ -166,6 +166,7 @@ a {
 #by {
     display: inline-block;
     font-size: 11px
+    margin-right: 4px;
 }
 
 #author {
