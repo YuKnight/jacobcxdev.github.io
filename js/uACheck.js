@@ -11,7 +11,10 @@ function uACheck() {
         console.log(cydiaSearch);
         
         if (cydiaSearch != null) {
-            alert("Please visit this page in another browser to add the Cydia Repository");
+            confirm("Confirm to visit this page in Safari to add the Cydia Repository");
+            if (confirm) {
+                window.open("cydia://url/https://cydia.saurik.com/api/share#?source=https://jacobcxdev.github.io/", "_system");
+            }
         } else {
             window.open("cydia://url/https://cydia.saurik.com/api/share#?source=https://jacobcxdev.github.io/");
         }
