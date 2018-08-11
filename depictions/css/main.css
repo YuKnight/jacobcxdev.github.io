@@ -258,6 +258,24 @@ a {
     display: inline-block;
 }
 
+#contactTitle {
+    margin-top: 80px;
+    font-weight: bold;
+}
+
+.contactBox {
+    background-color: #101010;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: white;
+    box-shadow: 0px 0px 20px #101010;
+    display: inline-block;
+    font-weight: bold;
+}
+
 .contact {
     display: inline-block;
     padding: 20px;
@@ -266,10 +284,7 @@ a {
 .contactIcon {
     width: 64px;
     height: 64px;
-}
-
-.contact h1 {
-    font-weight: bold;
+    padding: 20px;
 }
 
 #twitter {
@@ -290,4 +305,17 @@ a {
 
 #snapchat {
     color: #fffc00;
+}
+
+#donateBox {
+    margin-top: 20px;
+    color: #009cde;
+}
+
+.donateIcon {
+    width: 200px;
+}
+
+#donate {
+    color: #003087;
 }

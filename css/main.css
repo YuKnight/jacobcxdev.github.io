@@ -165,7 +165,7 @@ a {
 
 #by {
     display: inline-block;
-    font-size: 11px
+    font-size: 11px;
     margin-right: 4px;
 }
 
@@ -225,6 +225,7 @@ a {
     color: white;
     box-shadow: 0px 0px 20px #101010;
     display: inline-block;
+    font-weight: bold;
 }
 
 .contact {
@@ -235,10 +236,7 @@ a {
 .contactIcon {
     width: 64px;
     height: 64px;
-}
-
-.contact h1 {
-    font-weight: bold;
+    padding: 20px;
 }
 
 #twitter {
@@ -261,3 +259,15 @@ a {
     color: #fffc00;
 }
 
+#donateBox {
+    margin-top: 20px;
+    color: #009cde;
+}
+
+.donateIcon {
+    width: 200px;
+}
+
+#donate {
+    color: #003087;
+}
