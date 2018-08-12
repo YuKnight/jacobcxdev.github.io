@@ -13,6 +13,20 @@ Name: AppleMalwareRespring
 Author: Osctardo <osctardodev@icloud.com>
 Depiction: https://jacobcxdev.github.io/depictions/?p=com.jacobcxdev.applemalwarerespring/
 
+Package: com.jacobcxdev.jcxthemecompilation
+Version: 1.2.0
+Section: Themes
+Maintainer: Jacob | J{x} <jacobcxdev@gmail.com>
+Depends: com.anemonetheming.anemone
+Architecture: iphoneos-arm
+Filename: .//debs/com.jacobcxdev.jcxthemecompilation_1.2.0_iphoneos-arm.deb
+Size: 4324220
+MD5sum: 2eb9b6c2eae3beba8c0320099b153147
+Description: A compilation of glyph themes to fill in gaps with other themes.
+Name: J{x} Theme Compilation
+Author: Jacob | J{x} <jacobcxdev@gmail.com>
+Depiction: https://jacobcxdev.github.io/depictions/?p=com.jacobcxdev.jcxthemecompilation
+
 Package: com.jacobcxdev.smokeballrespring
 Version: 1.0.0
 Section: Themes
