@@ -187,33 +187,52 @@ $(function() {
                                          console.log("Your device is unidentified.");
                                          }
                                          
-                                         $(xml).find('description').each(function() {
-                                                                         document.getElementById("description").innerHTML = $(this).text();
-                                                                         console.log("Parsed description: " + $(this).text());
+                                         var emptyRegExp = /([A-z])/i;
+                                         var descriptionEmpty = emptyRegExp.exec($(this).find("description").text());
+                                         var dependenciesEmpty = emptyRegExp.exec($(this).find("dependencies").text());
+                                         var changeEmpty = emptyRegExp.exec($(this).find("change").text());
+                                         var screenshotsEmpty = emptyRegExp.exec($(this).find("screenshots").text());
+                                         
+                                         
+                                         if (descriptionEmpty != null) {
+                                         document.getElementById("descriptionBox").innerHTML = '<h1 class="boxTitle">Description</h1><div class="box"><ul id="description"></ul></div>';
+                                         $(this).find('description').each(function() {
+                                                                          document.getElementById("description").innerHTML = $(this).text();
+                                                                          console.log("Parsed description: " + $(this).text());
+                                                                          });
+                                         }
+                                         
+                                         if (changeEmpty != null) {
+                                         document.getElementById("changeLogBox").innerHTML = '<h1 class="boxTitle">ChangeLog</h1><div class="box"><ul id="changeLog"></ul></div>';
+                                         $(this).find('change').each(function() {
+                                                                     $("#changeLog").append('<li class="changeVersion">' + "v" + $(this).find("changeVersion").text() + '</li>');
+                                                                     console.log("Parsed changeVersion: " + $(this).text());
+                                                                     
+                                                                     var changeDescriptionID = $(this).find("changeVersion").text().replace(/[^\d]/g, "_");
+                                                                     
+                                                                     $("#changeLog").append('<ul class="changeDescription" id="' + changeDescriptionID + '">' + '</ul>');
+                                                                     $(this).find('changeDescription').each(function() {
+                                                                                                            $("#" + changeDescriptionID).append('<li>' + $(this).text() + '</li>');
+                                                                                                            console.log("Parsed changeDescription: " + $(this).text());
+                                                                                                            });
+                                                                     });
+                                         }
+                                         
+                                         if (dependenciesEmpty != null) {
+                                         document.getElementById("dependenciesBox").innerHTML = '<h1 class="boxTitle">Dependencies</h1><div class="box"><ul id="dependencies"></ul></div>';
+                                         $(this).find('dependency').each(function() {
+                                                                         $("#dependencies").append('<li>' + $(this).text() + '</li>');
+                                                                         console.log("Parsed dependency: " + $(this).text());
                                                                          });
+                                         }
                                          
-                                         $(xml).find('dependency').each(function() {
-                                                                        $("#dependencies").append('<li>' + $(this).text() + '</li>');
-                                                                        console.log("Parsed dependency: " + $(this).text());
-                                                                        });
-                                         
-                                         $(xml).find('change').each(function() {
-                                                                    $("#changeLog").append('<li class="changeVersion">' + "v" + $(this).find("changeVersion").text() + '</li>');
-                                                                    console.log("Parsed changeVersion: " + $(this).text());
-                                                                    
-                                                                    var changeDescriptionID = $(this).find("changeVersion").text().replace(/[^\d]/g, "_");
-                                                                    
-                                                                    $("#changeLog").append('<ul class="changeDescription" id="' + changeDescriptionID + '">' + '</ul>');
-                                                                    $(this).find('changeDescription').each(function() {
-                                                                                                           $("#" + changeDescriptionID).append('<li>' + $(this).text() + '</li>');
-                                                                                                           console.log("Parsed changeDescription: " + $(this).text());
-                                                                                                           });
-                                                                    });
-                                         
-                                         $(xml).find('screen').each(function() {
+                                         if (screenshotsEmpty != null) {
+                                         document.getElementById("screenshotsBox").innerHTML = '<h1 class="boxTitle">Screenshots</h1><div class="box"><ul id="screenshots"></ul></div>';
+                                         $(this).find('screen').each(function() {
                                                                     $("#screenshots").append('<li>' + '<img src="' + pathTo + "/" + $(this).text() + '" draggable="false" />' + '</li>');
                                                                     console.log("Parsed screenshot: " + $(this).text());
                                                                     });
+                                         }
                                          });
          }
          });
