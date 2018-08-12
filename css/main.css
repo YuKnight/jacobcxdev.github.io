@@ -183,6 +183,7 @@ a {
     text-align: center;
     color: white;
     display: inline-block;
+    max-width: 800px;
 }
 
 .package {
