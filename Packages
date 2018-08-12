@@ -62,8 +62,8 @@ Section: Tweaks
 Maintainer: Jacob | J{x} <jacobcxdev@gmail.com>
 Architecture: iphoneos-arm
 Filename: .//debs/com.jacobcxdev.tactful_1.3_iphoneos-arm.deb
-Size: 10852
-MD5sum: 5160966c763ea56590ad1f1f1f654395
+Size: 10848
+MD5sum: 0392ad5413f993c9e5e555bafd67d9a9
 Description: 3D Touch Support for Cydia.
 Name: Tactful
 Author: Janosh <jacobcxdev@gmail.com>
