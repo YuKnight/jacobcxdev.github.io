@@ -1,4 +1,4 @@
-$.getJSON("https://cydia.s0n1c.org/cydia/?url=https://jacobcxdev.github.io/", function(data) {
+$.getJSON("https://cydia.s0n1c.org/cydia/?fetch&url=https://jacobcxdev.github.io/", function(data) {
           $.each(data.packages, function(key, value) {
                  
                  var pathTo = value.depict.replace("?p=", "");
