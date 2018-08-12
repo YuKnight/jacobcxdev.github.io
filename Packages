@@ -1,4 +1,4 @@
-Package: com.jacobcxdev.AppleMalwareRespring
+Package: com.jacobcxdev.applemalwarerespring
 Version: 1.0.0
 Section: Themes
 Maintainer: J{x} <jacobcxdev@gmail.com>
@@ -6,12 +6,26 @@ Depends: mobilesubstrate, com.anemonetheming.anemone
 Conflicts: com.wizages.bae
 Architecture: iphoneos-arm
 Filename: .//debs/com.jacobcxdev.applemalwarerespring.deb
-Size: 35303560
-MD5sum: e1764e5f1c679e18f0f2ab61bf1afdb3
+Size: 35304640
+MD5sum: 587e82af44c9d0098b8281971905b44d
 Description: Glitchy respring animation for Anemone.
 Name: AppleMalwareRespring
 Author: Osctardo <osctardodev@icloud.com>
 Depiction: https://jacobcxdev.github.io/depictions/?p=com.jacobcxdev.applemalwarerespring/
+
+Package: com.jacobcxdev.cocoatop
+Version: 2.0.2
+Section: Utilities
+Maintainer: Jacob | J{x} <jacobcxdev@gmail.com>
+Conflicts: ru.domo.cocoatop
+Architecture: iphoneos-arm
+Filename: .//debs/com.jacobcxdev.cocoatop_2.0.2_iphoneos-arm.deb
+Size: 119144
+MD5sum: 5b565d56778adaca074ef3b027519dc1
+Description: Process Viewer for iOS GUI (64-bit).
+Name: CocoaTop
+Author: Domo <jacobcxdev@gmail.com>
+Depiction: https://jacobcxdev.github.io/depictions/?p=com.jacobcxdev.cocoatop/
 
 Package: com.jacobcxdev.jcxthemecompilation
 Version: 1.2.0
@@ -20,12 +34,12 @@ Maintainer: Jacob | J{x} <jacobcxdev@gmail.com>
 Depends: com.anemonetheming.anemone
 Architecture: iphoneos-arm
 Filename: .//debs/com.jacobcxdev.jcxthemecompilation_1.2.0_iphoneos-arm.deb
-Size: 4324220
-MD5sum: 2eb9b6c2eae3beba8c0320099b153147
+Size: 4324672
+MD5sum: 4a1c19a2a8303b55636d88bd7e370f6f
 Description: A compilation of glyph themes to fill in gaps with other themes.
 Name: J{x} Theme Compilation
 Author: Jacob | J{x} <jacobcxdev@gmail.com>
-Depiction: https://jacobcxdev.github.io/depictions/?p=com.jacobcxdev.jcxthemecompilation
+Depiction: https://jacobcxdev.github.io/depictions/?p=com.jacobcxdev.jcxthemecompilation/
 
 Package: com.jacobcxdev.smokeballrespring
 Version: 1.0.0
@@ -35,12 +49,25 @@ Depends: mobilesubstrate, com.anemonetheming.anemone
 Conflicts: com.wizages.bae
 Architecture: iphoneos-arm
 Filename: .//debs/com.jacobcxdev.smokeballrespring.deb
-Size: 16549408
-MD5sum: e2183cf738403e6274adcce947bf6d12
+Size: 16549312
+MD5sum: 882eda3421b5fc377be9beac564ac4f9
 Description: A smoke ball animation for Anemone.
 Name: SmokeBallRespring
 Author: Osctardo <osctardodev@icloud.com>
 Depiction: https://jacobcxdev.github.io/depictions/?p=com.jacobcxdev.smokeballrespring/
+
+Package: com.jacobcxdev.tactful
+Version: 1.3
+Section: Themes
+Maintainer: Jacob | J{x} <jacobcxdev@gmail.com>
+Architecture: iphoneos-arm
+Filename: .//debs/com.jacobcxdev.tactful_1.3_iphoneos-arm.deb
+Size: 10840
+MD5sum: f9eb766767ba8236ee64f6e280339ec4
+Description: 3D Touch Support for Cydia.
+Name: Tactful
+Author: Janosh <jacobcxdev@gmail.com>
+Depiction: https://jacobcxdev.github.io/depictions/?p=com.jacobcxdev.tactful/
 
 Package: com.jacobcxdev.verboserespring
 Version: 1.0.0
@@ -50,8 +77,8 @@ Depends: mobilesubstrate, com.anemonetheming.anemone
 Conflicts: com.wizages.bae
 Architecture: iphoneos-arm
 Filename: .//debs/com.jacobcxdev.verboserespring.deb
-Size: 18914296
-MD5sum: 68379fb87ffc38b87226694394211e17
+Size: 18914280
+MD5sum: d640763fd4b32adf2b98d818f088a3e5
 Description: A verbose respring animation for Anemone.
 Name: VerboseRespring
 Author: Osctardo <osctardodev@icloud.com>
