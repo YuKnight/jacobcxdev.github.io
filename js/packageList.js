@@ -5,7 +5,7 @@ $.getJSON("https://cydia.s0n1c.org/cydia/?fetch&url=https://jacobcxdev.github.io
                  
                  $.ajax({
                         type: "GET",
-                        url: pathTo + "info.xml",
+                        url: pathTo + "/info.xml",
                         dataType: "xml",
                         success: function(xml) {
                         console.log("Beginning XML Parsing");
