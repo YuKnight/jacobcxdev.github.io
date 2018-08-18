@@ -36,7 +36,7 @@ $.getJSON("https://cydia.s0n1c.org/cydia/?fetch&url=https://jacobcxdev.github.io
                                                         by: by
                                                         }
                                                         
-                                                        $("#packagesBox").append('<a href="' + value.depict + '" target="_blank"><div class="package"><h1>' + package.name + '</h1><h2 id="version">' + package.version + '</h2><img class="sectionIcon" src="' + package.sectionIcon + '" alt="' + package.sectionIconAlt + '"><h3 id="by">' + package.by + '</h3><h4 id="author">' + package.author + '</h4></div></a>')
+                                                        $("#packagesBox").append('<a href="' + value.depict + '"><div class="package"><h1>' + package.name + '</h1><h2 id="version">' + package.version + '</h2><img class="sectionIcon" src="' + package.sectionIcon + '" alt="' + package.sectionIconAlt + '"><h3 id="by">' + package.by + '</h3><h4 id="author">' + package.author + '</h4></div></a>')
                                                         
                                                         });
                         }
