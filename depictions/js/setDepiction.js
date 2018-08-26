@@ -199,6 +199,7 @@ $(function() {
                                          $(this).find('description').each(function() {
                                                                           var converter = new showdown.Converter(),
                                                                           html = converter.makeHtml($(this).text());
+                                                                          console.log("Description HTML = " + html);
                                                                           document.getElementById("description").innerHTML = html;
                                                                           console.log("Parsed description: " + $(this).text());
                                                                           });
