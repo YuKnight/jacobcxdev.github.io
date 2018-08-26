@@ -195,7 +195,7 @@ $(function() {
                                          
                                          
                                          if (descriptionEmpty != null) {
-                                         document.getElementById("descriptionBox").innerHTML = '<h1 class="boxTitle">Description</h1><div class="box"><ul id="description"></ul></div>';
+                                         document.getElementById("descriptionBox").innerHTML = '<h1 class="boxTitle">Description</h1><div class="box" id="description"></div>';
                                          $(this).find('description').each(function() {
                                                                           var converter = new showdown.Converter(),
                                                                           html = converter.makeHtml($(this).text());
