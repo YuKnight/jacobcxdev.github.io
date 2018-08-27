@@ -2,10 +2,10 @@ $.getJSON("https://cydia.s0n1c.org/cydia/?fetch&url=https://jacobcxdev.github.io
           $.each(data.packages, function(key, value) {
                  
                  var pathTo = value.depict.replace("?p=", ""),
-                 split = pathTo.split("/"),
-                 bundle = split[split.length - 2],
+                 split = value.depict.split("/"),
+                 packagePath = "/depictions/" + split[split.length - 2],
                  package = null;
-                 console.log(bundle);
+                 console.log(packagePath);
                  
                  $.getJSON(pathTo + "/info.json", function(data) {
                            
@@ -34,7 +34,7 @@ $.getJSON("https://cydia.s0n1c.org/cydia/?fetch&url=https://jacobcxdev.github.io
                            by: by
                            }
                            
-                           $("#packagesBox").append('<a href="' + value.depict + '"><div class="package"><h1>' + package.name + '</h1><h2 id="version">' + package.version + '</h2><img class="sectionIcon" src="' + package.sectionIcon + '" alt="' + package.sectionIconAlt + '"><h3 id="by">' + package.by + '&nbsp;</h3><h4 id="author">' + package.author + '</h4></div></a>');
+                           $("#packagesBox").append('<a href="' + packagePath + '"><div class="package"><h1>' + package.name + '</h1><h2 id="version">' + package.version + '</h2><img class="sectionIcon" src="' + package.sectionIcon + '" alt="' + package.sectionIconAlt + '"><h3 id="by">' + package.by + '&nbsp;</h3><h4 id="author">' + package.author + '</h4></div></a>');
                            
                            });
                  });
