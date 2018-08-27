@@ -71,9 +71,9 @@ $(function() {
             if (!unsupportedDevice) {
             var version = removeDevice.replace(/\_/g, '.');
             
-            var miniOS = $(this).find("miniOS").text().trim().split('.').map(Number);
+            var miniOS = data.compatibility.miniOS.trim().split('.').map(Number);
             console.log("miniOS = " + miniOS);
-            var maxiOS = $(this).find("maxiOS").text().trim().split('.').map(Number);
+            var maxiOS = data.compatibility.maxiOS.trim().split('.').map(Number);
             console.log("maxiOS = " + maxiOS);
             var userOS = version.trim().split('.').map(Number);
             console.log("userOS = " + userOS);
