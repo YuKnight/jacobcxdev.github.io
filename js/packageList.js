@@ -2,7 +2,10 @@ $.getJSON("https://cydia.s0n1c.org/cydia/?fetch&url=https://jacobcxdev.github.io
           $.each(data.packages, function(key, value) {
                  
                  var pathTo = value.depict.replace("?p=", ""),
+                 split = pathTo.split("/"),
+                 bundle = split[split.length - 2],
                  package = null;
+                 console.log(bundle);
                  
                  $.getJSON(pathTo + "/info.json", function(data) {
                            
