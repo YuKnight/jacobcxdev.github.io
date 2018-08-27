@@ -202,7 +202,7 @@ $(function() {
                    $("#changeLog").append('<li class="changeVersion">' + "v" + value.changeVersion + '</li>');
                    console.log("Parsed changeVersion: " + value.changeVersion);
                    
-                   var changeDescriptionID = value.changeVersion.replace(/./g, "_");
+                   var changeDescriptionID = value.changeVersion.replace(/[.,\s]/g, "_");
                    
                    $("#changeLog").append('<ul class="changeDescription" id="' + changeDescriptionID + '">' + '</ul>');
                    
