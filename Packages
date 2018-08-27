@@ -84,18 +84,3 @@ Name: VerboseRespring
 Author: Osctardo <osctardodev@icloud.com>
 Depiction: https://jacobcxdev.github.io/depictions/?p=com.jacobcxdev.verboserespring/
 
-Package: com.junesiphone.lockpluspro
-Version: 1.3.4
-Section: Addons (Tweaks)
-Maintainer: June <junesgraphics@gmail.com>
-Depends: mobilesubstrate, preferenceloader
-Architecture: iphoneos-arm
-Filename: .//debs/com.junesiphone.lockpluspro_1.3.4_iphoneos-arm.deb
-Size: 11613644
-Installed-Size: 36404
-MD5sum: a0a840d493ed905d726f25014fc0a53a
-Description: The ultimate lock screen tweak!
-Name: LockPlus Pro
-Author: JunesiPhone <junesgraphics@gmail.com>
-Depiction: http://www.junesiphone.com/supersecret/depiction.php?iframe=depiction/lockpluspro
-
