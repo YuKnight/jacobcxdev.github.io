@@ -1,0 +1,29 @@
+{
+    "name": "SmokeBallRespring",
+    "bundleId": "com.jacobcxdev.smokeballrespring",
+    "version": "1.0.0",
+    "section": "Themes",
+    "author": "Osctardo",
+    "description": "**A *\"smoke ball\"* respring animation for Anemone.**\n\n\nOriginally requested by u/Cyko__, u/Momoske (Osctardo) decided to make a \"Smoke Ball\" animation for all devices with the 7 different resolutions:\n\n- 1136x640 (iPhone 5s)\n- 1334x750 (iPhone 6/7/8)\n- 1472x828 (iPhone 6/7/8 upscaled)\n- 1920x1080 (iPhone 6+/7+/8+)\n- 2208x1242 (iPhone 6+/7+/8+ upscaled)\n- 2436x1125 (iPhone X)\n- 2688x1242 (iPhone X upscaled)\n\n\nIn the comments of the [UPCOMING] post on r/jailbreak, 2 other people (u/MatRanc and u/R3IZ4) requested for:\n\n- An *\"Apple Glitch\"* respring animation\n- A *\"Verbose\"* respring animation, which was both reworked and updated to look great on all these devices and resolutions\n\n\nThis is the *\"Smoke Ball\"* respring animation.",
+    "compatibility": {
+        "iPhoneSupported": "true",
+        "iPadSupported": "false",
+        "miniOS": "11.0",
+        "maxiOS": "11.4"
+    },
+    "changelog": [
+                  {
+                  "changeVersion": "1.0.0",
+                  "changeDescription": [
+                                        "Initial Release"
+                                        ]
+                  }
+                  ],
+    "dependencies": [
+                     "mobilesubstrate",
+                     "com.anemonetheming.anemone"
+                     ],
+    "screenshots": [
+                    "SBRiPX.gif"
+                    ]
+}

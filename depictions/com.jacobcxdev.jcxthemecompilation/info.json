@@ -1,0 +1,40 @@
+{
+    "name": "J{x} Theme Compilation",
+    "bundleId": "com.jacobcxdev.jcxthemecompilation",
+    "version": "1.2.0",
+    "section": "Themes",
+    "author": "Jacob | J{x}",
+    "description": "**A compilation of glyph themes to fill in gaps with other themes.**\n\n\nThis is a compilation of different glyph themes, created to theme unthemed icons on my home screen with white glyphs.",
+    "compatibility": {
+        "iPhoneSupported": "true",
+        "iPadSupported": "true",
+        "miniOS": "11.0",
+        "maxiOS": "11.4"
+    },
+    "changelog": [
+                  {
+                  "changeVersion": "1.2.0",
+                  "changeDescription": [
+                                        "Added new icons (Fortnite, PUBG, and more...)"
+                                        ]
+                  },
+                  {
+                  "changeVersion": "1.1.0",
+                  "changeDescription": [
+                                        "Added new icons"
+                                        ]
+                  },
+                  {
+                  "changeVersion": "1.0.0",
+                  "changeDescription": [
+                                        "Initial Upload"
+                                        ]
+                  }
+                  ],
+    "dependencies": [
+                     "com.anemonetheming.anemone"
+                     ],
+    "screenshots": [
+                    "1.png"
+                    ]
+}

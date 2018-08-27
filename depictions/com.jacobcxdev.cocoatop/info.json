@@ -1,0 +1,24 @@
+{
+    "name": "CocoaTop",
+    "bundleId": "com.jacobcxdev.cocoatop",
+    "version": "2.0.2",
+    "section": "Utilities",
+    "author": "Domo",
+    "description": "**Process Viewer for iOS GUI (64-bit).**",
+    "compatibility": {
+        "iPhoneSupported": "true",
+        "iPadSupported": "true",
+        "miniOS": "11.0",
+        "maxiOS": "11.4"
+    },
+    "changelog": [
+                  {
+                  "changeVersion": "2.0.2",
+                  "changeDescription": [
+                                        "Updated for iOS 11"
+                                        ]
+                  }
+                  ],
+    "dependencies": [],
+    "screenshots": []
+}

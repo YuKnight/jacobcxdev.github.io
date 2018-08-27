@@ -1,0 +1,22 @@
+{
+    "name": "",
+    "bundleId": "",
+    "version": "",
+    "section": "",
+    "author": "",
+    "description": "",
+    "compatibility": {
+        "iPhoneSupported": "",
+        "iPadSupported": "",
+        "miniOS": "",
+        "maxiOS": ""
+    },
+    "changelog": [
+                  {
+                  "changeVersion": "",
+                  "changeDescription": [""]
+                  }
+                  ],
+    "dependencies": [],
+    "screenshots": []
+}

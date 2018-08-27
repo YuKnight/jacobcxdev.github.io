@@ -1,0 +1,22 @@
+{
+    "name": "Tactful",
+    "bundleId": "com.jacobcxdev.tactful",
+    "version": "1.3",
+    "section": "Tweaks",
+    "author": "Janosh",
+    "description": "**3D Touch Support for Cydia.**",
+    "compatibility": {
+        "iPhoneSupported": "true",
+        "iPadSupported": "true",
+        "miniOS": "11.0",
+        "maxiOS": "11.4"
+    },
+    "changelog": [
+                  {
+                  "changeVersion": "1.3",
+                  "changeDescription": ["Updated for iOS 11"]
+                  }
+                  ],
+    "dependencies": [],
+    "screenshots": []
+}
