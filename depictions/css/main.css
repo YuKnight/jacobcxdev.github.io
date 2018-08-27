@@ -1,9 +1,149 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font: inherit;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
 body {
     margin: 0;
     padding: 0;
     background-color: black;
     -webkit-font-smoothing: antialiased;
-    font: 14px -apple-system-font,".Helvetica NeueUI","Helvetica Neue",sans-serif;
+    font: 14px -apple-system-font, ".Helvetica NeueUI", "Helvetica Neue", sans-serif;
     width: 100%;
     padding-bottom: 40px;
 }
@@ -77,7 +217,7 @@ a {
     color: white;
 }
 
-.box{
+.box {
     background-color: #101010;
     margin-bottom: 20px;
     width: 90vw;
@@ -91,16 +231,16 @@ a {
     box-shadow: 0px 0px 10px #101010;
 }
 
-.box h1{
+.box h1 {
     display: inline-block;
 }
 
-#name{
+#name {
     font-size: 20px;
     font-weight: bold;
 }
 
-#version{
+#version {
     float: center;
     font-size: 10px;
     margin-bottom: 10px;
@@ -117,14 +257,18 @@ a {
     display: inline-block;
 }
 
-#compatibilityIcon, #compatibilitySide{
+#compatibilityIcon,
+#compatibilitySide {
     display: block;
     color: black;
 }
-#compatibilityIcon{
+
+#compatibilityIcon {
     font-size: 34px;
 }
-#MINIOS,#MAXIOS{
+
+#MINIOS,
+#MAXIOS {
     display: inline-block;
 }
 
@@ -135,7 +279,7 @@ a {
     padding-bottom: 10px;
 }
 
-#description li{
+#description li {
     text-align: left;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -163,7 +307,7 @@ a {
     list-style: circle;
 }
 
-#dependencies li{
+#dependencies li {
     text-align: left;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -171,7 +315,7 @@ a {
     list-style: circle;
 }
 
-#screenshots{
+#screenshots {
     overflow-x: scroll;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;

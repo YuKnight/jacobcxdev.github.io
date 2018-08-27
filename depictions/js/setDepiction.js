@@ -1,5 +1,5 @@
 $(function() {
-  var bundle = "com.jacobcxdev.applemalwarerespring";
+  var bundle = getQueryVariable('p');
   
   if (bundle != undefined) {
   //Now fetch the appropriate file from this query string
@@ -11,10 +11,8 @@ $(function() {
   baseUrl = getUrl.protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1],
   pathTo = baseUrl + "/" + bundle;
   
-  pathTo = "https://jacobcxdev.github.io/depictions/com.jacobcxdev.applemalwarerespring/"
-  
   $.getJSON(pathTo + "/info.json", function(data) {
-            document.getElementById("sectionIcon").src = "https://jacobcxdev.github.io/sections/" + data.section.replace(" ", "_") + ".png";
+            document.getElementById("sectionIcon").src = "../sections/" + data.section.replace(/ /g, "_") + ".png";
             document.getElementById("sectionIcon").alt = data.section;
             
             document.getElementById("name").innerHTML = data.name;
@@ -190,10 +188,12 @@ $(function() {
             if (descriptionEmpty != null) {
             document.getElementById("descriptionBox").innerHTML = '<h1 class="boxTitle">Description</h1><div class="box" id="description"></div>';
             var converter = new showdown.Converter(),
-            html = converter.makeHtml(data.description);
-            console.log("Description HTML = " + html);
+            description = data.description.replace(/\n{2,}/g, m => m.replace(/\n/g, "<br/>"));
+            console.log(description);
+            description = description.replace(/<br\/>([^<])/g, "<br\/>\n\n$1");
+            console.log(description);
+            var html = converter.makeHtml(description);
             document.getElementById("description").innerHTML = html;
-            console.log("Parsed description: " + data.description);
             }
             
             if (changeEmpty == false) {

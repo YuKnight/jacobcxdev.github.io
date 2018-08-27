@@ -1,32 +1,113 @@
-/* http://meyerweb.com/eric/tools/css/reset/
- v2.0 | 20110126
- License: none (public domain)
- */
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
     margin: 0;
     padding: 0;
     border: 0;
     font-size: 100%;
-    font: inherit;
     vertical-align: baseline;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font: inherit;
+}
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
     display: block;
 }
 
@@ -34,16 +115,20 @@ body {
     line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
     list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
     quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
     content: '';
     content: none;
 }
@@ -58,7 +143,7 @@ body {
     padding: 0;
     background-color: black;
     -webkit-font-smoothing: antialiased;
-    font: 14px -apple-system-font,".Helvetica NeueUI","Helvetica Neue",sans-serif;
+    font: 14px -apple-system-font, ".Helvetica NeueUI", "Helvetica Neue", sans-serif;
     width: 100%;
     padding-bottom: 40px;
 }
@@ -133,7 +218,7 @@ a {
     font-weight: bold;
 }
 
-.box{
+.box {
     background-color: #101010;
     margin-bottom: 20px;
     width: 90vw;
@@ -147,16 +232,16 @@ a {
     box-shadow: 0px 0px 10px #101010;
 }
 
-.box h1{
+.box h1 {
     display: inline-block;
 }
 
-#name{
+#name {
     font-size: 20px;
     font-weight: bold;
 }
 
-#version{
+#version {
     float: center;
     font-size: 10px;
     margin-bottom: 10px;
@@ -165,8 +250,7 @@ a {
 
 #by {
     display: inline-block;
-    font-size: 11px;
-    margin-right: 4px;
+    font-size: 11px
 }
 
 #author {
@@ -183,7 +267,6 @@ a {
     text-align: center;
     color: white;
     display: inline-block;
-    max-width: 800px;
 }
 
 .package {
@@ -202,7 +285,6 @@ a {
 .package h1 {
     font-size: 15px;
     padding-bottom: 5px;
-    font-weight: bold;
 }
 
 .sectionIcon {
@@ -226,18 +308,21 @@ a {
     color: white;
     box-shadow: 0px 0px 20px #101010;
     display: inline-block;
-    font-weight: bold;
 }
 
 .contact {
     display: inline-block;
-    padding: 20px;
+    padding: 10px;
 }
 
 .contactIcon {
     width: 64px;
     height: 64px;
     padding: 20px;
+}
+
+.contact h1 {
+    font-weight: bold;
 }
 
 #twitter {
@@ -258,17 +343,4 @@ a {
 
 #snapchat {
     color: #fffc00;
-}
-
-#donateBox {
-    margin-top: 20px;
-    color: #009cde;
-}
-
-.donateIcon {
-    width: 200px;
-}
-
-#donate {
-    color: #003087;
 }
